@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>台鐵列車介紹</title>
+<style>
+:root {
+  --bg: #000;
+  --fg: #f5f5f5;
+  --muted: #9a9a9a;
+  --accent: #4fc3f7;
+  --max-width: 1000px;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.6;
+}
+header { padding: 1rem; text-align: center; border-bottom:1px solid rgba(255,255,255,0.1); }
+header img.logo-img { height:48px; vertical-align:middle; }
+header h1 { display:inline-block; margin-left:0.5rem; font-size:1.8rem; vertical-align:middle; }
+nav { display:flex; flex-wrap:wrap; justify-content:center; gap:0.5rem; padding:0.5rem; border-bottom:1px solid rgba(255,255,255,0.1);}
+nav button { background:none; border:1px solid rgba(255,255,255,0.4); color:var(--fg); padding:0.4rem 0.8rem; border-radius:6px; cursor:pointer; transition:0.2s; }
+nav button:hover, nav button.active { background:rgba(79,195,247,0.2); border-color:var(--accent); color:var(--accent);}
+main { max-width: var(--max-width); margin:1.5rem auto; padding:0 1rem; }
+section { display:none; }
+section.active { display:block; }
+.train-img { width:100%; max-height:300px; object-fit:cover; border-radius:8px; margin-bottom:1rem; }
+.specs { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:0.6rem; margin-bottom:1rem; }
+.spec { background:rgba(255,255,255,0.05); padding:0.6rem; border-radius:8px; border:1px solid rgba(255,255,255,0.07);}
+.spec b { display:block; margin-bottom:0.3rem;}
+p.intro { margin:0.5rem 0 1.2rem;}
+.back-btn { display:inline-block; margin-top:1rem; padding:0.4rem 0.8rem; color:var(--accent); border:1px solid var(--accent); border-radius:6px; text-decoration:none; cursor:pointer;}
+footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,255,0.1); color:var(--muted); font-size:0.9rem;}
+@media(max-width:600px){.train-img{max-height:200px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="images/logo.png" alt="Logo" class="logo-img">
+  <h1>台鐵列車介紹</h1>
+</header>
+
+<nav id="menu">
+  <button class="active" data-target="temu1000">TEMU1000</button>
+  <button data-target="temu2000">TEMU2000</button>
+  <button data-target="emu500">EMU500</button>
+  <button data-target="emu600">EMU600</button>
+  <button data-target="emu700">EMU700</button>
+  <button data-target="emu800">EMU800</button>
+  <button data-target="emu900">EMU900</button>
+  <button data-target="emu1200">EMU1200</button>
+  <button data-target="emu3000">EMU3000</button>
+  <button data-target="e200">E200–400</button>
+  <button data-target="e500">E500</button>
+  <button data-target="e1000">E1000</button>
+  <button data-target="dr1000">DR1000</button>
+  <button data-target="dr3100">DR3100</button>
+</nav>
+
+<main>
+<!-- TEMU1000 -->
+<section id="temu1000" class="active">
+  <img src="images/temu1000.jpg" alt="TEMU1000" class="train-img">
+  <div class="specs">
+    <div class="spec"><b>車種</b> 傾斜式自強號</div>
+    <div class="spec"><b>最高速度</b> 150 km/h</div>
+    <div class="spec"><b>營運速度</b> 130 km/h</div>
+    <div class="spec"><b>牽引系統</b> IGBT‑VVVF</div>
+    <div class="spec"><b>運用路線</b> 東部幹線、北迴線、宜蘭線</div>
+    <div class="spec"><b>製造年份 / 廠商</b> 2007 / 日本車輛 + 日立</div>
+  </div>
+  <p class="intro">TEMU1000 型電聯車，通稱「太魯閣號」，為臺鐵首款傾斜式自強號，專為提升山線／東部路段速度與行車性能而設計。牽引系統採 IGBT／VVVF 控制器搭配鼠籠式非同步電動機。運用路線主要為東部幹線與北迴線，作為自強號主力車型之一。</p>
+  <a class="back-btn" onclick="showPage('')">返回車種總覽</a>
+</section>
+
+<!-- TEMU2000 -->
+<section id="temu2000">
+  <img src="images/temu2000.jpg" alt="TEMU2000" class="train-img">
+  <div class="specs">
+    <div class="spec"><b>車種</b> 傾斜式自強號</div>
+    <div class="spec"><b>最高速度</b> 150 km/h</div>
+    <div class="spec"><b>營運速度</b> 130 km/h</div>
+    <div class="spec"><b>牽引系統</b> IGBT‑VVVF</div>
+    <div class="spec"><b>運用路線</b> 東部幹線、北迴線</div>
+    <div class="spec"><b>製造年份 / 廠商</b> 2010 / 日本車輛</div>
+  </div>
+  <p class="intro">TEMU2000 型列車，通稱「普悠瑪號」，為 TEMU1000 改良型，增加牽引性能與舒適度，運行於東部幹線及北迴線，擔任自強號列車。</p>
+  <a class="back-btn" onclick="showPage('')">返回車種總覽</a>
+</section>
+
+<!-- EMU500 -->
+<section id="emu500">
+  <img src="images/emu500.jpg" alt="EMU500" class="train-img">
+  <div class="specs">
+    <div class="spec"><b>車種</b> 區間車 / 通勤電聯車</div>
+    <div class="spec"><b>最高速度</b> 110 km/h</div>
+    <div class="spec"><b>營運速度</b> 95–110 km/h</div>
+    <div class="spec"><b>牽引系統</b> 直流電動機</div>
+    <div class="spec"><b>運用路線</b> 北部及西部支線</div>
+    <div class="spec"><b>製造年份 / 廠商</b> 1995 / 台灣車輛</div>
+  </div>
+  <p class="intro">EMU500 為臺鐵首批通勤區間電聯車，設計最高速度 110 km/h，主要行駛於臺北及新北短途支線，著重可靠性與維護方便性。</p>
+  <a class="back-btn" onclick="showPage('')">返回車種總覽</a>
+</section>
+
+<!-- EMU600 -->
+<section id="emu600">
+  <img src="images/emu600.jpg" alt="EMU600" class="train-img">
+  <div class="specs">
+    <div class="spec"><b>車種</b> 區間車 / 通勤電聯車</div>
+    <div class="spec"><b>最高速度</b> 110 km/h</div>
+    <div class="spec"><b>營運速度</b> 95–110 km/h</div>
+    <div class="spec"><b>牽引系統</b> 直流電動機</div>
+    <div class="spec"><b>運用路線</b> 北部支線</div>
+    <div class="spec"><b>製造年份 / 廠商</b> 1998 / 台灣車輛</div>
+  </div>
+  <p class="intro">EMU600 為 EMU500 改良型，增加車廂耐用性與舒適度，主要運行於臺鐵北部支線，支援繁忙通勤需求。</p>
+  <a class="back-btn" onclick="showPage('')">返回車種總覽</a>
+</section>
+
+<!-- EMU700 -->
+<section id="emu700">
+  <img src="images/emu700.jpg" alt="EMU700" class="train-img">
+  <div class="specs">
+    <div class="spec"><b>車種</b> 區間車</div>
+    <div class="spec"><b>最高速度</b> 110 km/h</div>
+    <div class="spec"><b>營運速度</b> 95–110 km/h</div>
+    <div class="spec"><b>牽引系統</b> IGBT‑VVVF</div>
+    <div class="spec"><b>運用路線</b> 北部及中部通勤線</div>
+    <div class="spec"><b>製造年份 / 廠商</b> 2002 / 台灣車輛</div>
+  </div>
+  <p class="intro">EMU700 採 IGBT‑VVVF 控制，提升牽引效率與節能性能，主要運行於北部及中部通勤路線，適合上下班尖峰載客。</p>
+  <a class="back-btn" onclick="showPage('')">返回車種總覽</a>
+</section>
+
+<!-- EMU800 -->
+<section id="emu800">
+  <img src="images/emu800.jpg" alt="EMU800" class="train-img">
+  <div class="specs">
+    <div class="spec"><b>車種</b> 區間車</div>
+    <div class="spec"><b>最高速度</b> 110 km/h</div>
+    <div class="spec"><b>營運速度</b> 95–110 km/h</div>
+    <div class="spec"><b>牽引系統</b> IGBT‑VVVF</div>
+    <div class="spec"><b>運用路線</b> 北部支線</div>
+    <div class="spec"><b>製造年份 / 廠商</b> 2006 / 台灣車輛</div>
+  </div>
+  <p class="intro">EMU800 為 2006 年製造的區間通勤車，支援繁忙通勤線路，車隊運用彈性高，可重聯運行。</p>
+  <a class="back-btn" onclick="showPage('')">返回車種總覽</a>
+</section>
+
+<!-- EMU900 -->
+<section id="emu900">
+  <img src="images/emu900.jpg" alt="EMU900" class="train-img">
+  <div class="specs">
+    <div class="spec"><b>車種</b> 區間車 / 通勤</div>
+    <div class="spec"><b>最高速度</b> 110 km/h</div>
+    <div class="spec"><b>營運速度</b> 95–110 km/h</div>
+    <div class="spec"><b>牽引系統</b> IGBT‑VVVF</div>
+    <div class="spec"><b>運用路線</b> 北部支線及支線快速班次</div>
+    <div class="spec"><b>製造年份 / 廠商</b> 2014 / 台灣車輛</div>
+  </div>
+  <p class="intro">EMU900 為最新通勤車型，提升車內空間與舒適度，主要用於北部都會區及支線快速班次，兼具載客量與運行彈性。</p>
+  <a class="back-btn" onclick="showPage('')">返回車種總覽</a>
+</section>
+
+<!-- EMU1200 -->
+<section id="emu1200">
+  <img src="images/emu1200.jpg" alt="EMU1200" class="train-img">
+  <div class="specs">
+    <div class="spec"><b>車種</b> 自強號（紅斑馬）</div>
+    <div class="spec"><b>最高速度</b> 120 km/h</div>
+    <div class="spec"><b>營運速度</b> 110 km/h</div>
+    <div class="spec"><b>牽引系統</b> IGBT‑VVVF</div>
+    <div class="spec"><b>運用路線</b> 北部及中部自強號支線</div>
+    <div class="spec"><b>製造年份 / 廠商</b> 2006 / 台灣車輛</div>
+  </div>
+  <p class="intro">EMU1200 為紅斑馬自強號，由 EMU200 改良而來，主要用於自強號支線運行，補強既有車隊彈性，設計重點為可靠性與維護簡便。</p>
+  <a class="back-btn" onclick="showPage('')">返回車種總覽</a>
+</section>
+
+<!-- EMU3000 -->
+<section id="emu3000">
+  <img src="images/emu3000.jpg" alt="EMU3000" class="train-img">
+  <div class="specs">
+    <div class="spec"><b>車種</b> 城際電聯車</div>
+    <div class="spec"><b>最高速度</b> 130 km/h</div>
+    <div class="spec"><b>營運速度</b> 110–130 km/h</div>
+    <div class="spec"><b>牽引系統</b> SiC‑VVVF</div>
+    <div class="spec"><b>運用路線</b> 北中南幹線及支線快速班次</div>
+    <div class="spec"><b>製造年份 / 廠商</b> 2021 / 台灣車輛</div>
+  </div>
+  <p class="intro">EMU3000 為臺鐵新一代城際電聯車，採用 SiC‑VVVF 系統與舒適化車廂設計，主要運行於北中南幹線及支線快速班次，提升運行效率與乘坐品質。</p>
+  <a class="back-btn" onclick="showPage('')">返回車種總覽</a>
+</section>
+
+<!-- E200–400 -->
+<section id="e200">
+  <img src="images/e200-400.jpg" alt="E200–400" class="train-img">
+  <div class="specs">
+    <div class="spec"><b>車種</b> 電力機車群</div>
+    <div class="spec"><b>最高速度</b> 110 km/h</div>
+    <div class="spec"><b>牽引系統</b> 直流電動機</div>
+    <div class="spec"><b>運用路線</b> 自強號、莒光號、區間車</div>
+    <div class="spec"><b>製造年份 / 廠商</b> 1976–1982 / 英國重電</div>
+  </div>
+  <p class="intro">E200–400 系列電力機車，用於自強號、莒光號及區間車，設計重點在於可靠性與維護簡便，長期支援臺鐵主幹線運輸。</p>
+  <a class="back-btn" onclick="showPage('')">返回車種總覽</a>
+</section>
+
+<!-- E500 -->
+<section id="e500">
+  <img src="images/e500.jpg" alt="E500" class="train-img">
+  <div class="specs">
+    <div class="spec"><b>車種</b> 電力機車</div>
+    <div class="spec"><b>最高速度</b> 120 km/h</div>
+    <div class="spec"><b>牽引系統</b> IGBT‑VVVF</div>
+    <div class="spec"><b>運用路線</b> 莒光號、自強號</div>
+   
