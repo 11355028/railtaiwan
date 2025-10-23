@@ -11,6 +11,7 @@
   --muted: #9a9a9a;
   --accent: #4fc3f7;
   --max-width: 1000px;
+  --font-scale: 2; /* 放大字體比例 */
 }
 * { box-sizing: border-box; }
 html, body {
@@ -19,24 +20,22 @@ html, body {
   color: var(--fg);
   font-family: "Noto Sans TC", sans-serif;
   line-height: 1.6;
+  font-size: calc(1rem * var(--font-scale));
 }
 header { padding: 1rem; text-align: center; border-bottom:1px solid rgba(255,255,255,0.1); }
-header img.logo-img { height:48px; vertical-align:middle; }
-header h1 { display:inline-block; margin-left:0.5rem; font-size:1.8rem; vertical-align:middle; }
+header h1 { font-size: calc(1.8rem * var(--font-scale)); margin:0.5rem 0 0; }
 nav { display:flex; flex-wrap:wrap; justify-content:center; gap:0.5rem; padding:0.5rem; border-bottom:1px solid rgba(255,255,255,0.1);}
 nav button { background:none; border:1px solid rgba(255,255,255,0.4); color:var(--fg); padding:0.4rem 0.8rem; border-radius:6px; cursor:pointer; transition:0.2s; }
 nav button:hover, nav button.active { background:rgba(79,195,247,0.2); border-color:var(--accent); color:var(--accent);}
 main { max-width: var(--max-width); margin:1.5rem auto; padding:0 1rem; }
 section { display:none; }
 section.active { display:block; }
-.train-img { width:100%; max-height:300px; object-fit:cover; border-radius:8px; margin-bottom:1rem; }
 .specs { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:0.6rem; margin-bottom:1rem; }
 .spec { background:rgba(255,255,255,0.05); padding:0.6rem; border-radius:8px; border:1px solid rgba(255,255,255,0.07);}
 .spec b { display:block; margin-bottom:0.3rem;}
 p.intro { margin:0.5rem 0 1.2rem;}
 .back-btn { display:inline-block; margin-top:1rem; padding:0.4rem 0.8rem; color:var(--accent); border:1px solid var(--accent); border-radius:6px; text-decoration:none; cursor:pointer;}
-footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,255,0.1); color:var(--muted); font-size:0.9rem;}
-@media(max-width:600px){.train-img{max-height:200px;}}
+footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,255,0.1); color:var(--muted); font-size:calc(0.9rem * var(--font-scale));}
 </style>
 </head>
 <body>
@@ -66,7 +65,6 @@ footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,25
 <main>
 <!-- TEMU1000 -->
 <section id="temu1000" class="active">
-  <img src="https://blog.jasonwu.tw/wp-content/uploads/2014/02/MG_6882.jpg" alt="TEMU1000" class="train-img">
   <div class="specs">
     <div class="spec"><b>車種</b> 傾斜式自強號</div>
     <div class="spec"><b>最高速度</b> 150 km/h</div>
@@ -81,7 +79,6 @@ footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,25
 
 <!-- TEMU2000 -->
 <section id="temu2000">
-  <img src="https://cpok.tw/wp-content/uploads/2022/07/unnamed-file-17.jpg" alt="TEMU2000" class="train-img">
   <div class="specs">
     <div class="spec"><b>車種</b> 傾斜式自強號</div>
     <div class="spec"><b>最高速度</b> 150 km/h</div>
@@ -96,7 +93,6 @@ footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,25
 
 <!-- EMU500 -->
 <section id="emu500">
-  <img src="https://cdn2.ettoday.net/images/3474/d3474355.jpg" alt="EMU500" class="train-img">
   <div class="specs">
     <div class="spec"><b>車種</b> 區間車 / 通勤電聯車</div>
     <div class="spec"><b>最高速度</b> 110 km/h</div>
@@ -111,7 +107,6 @@ footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,25
 
 <!-- EMU600 -->
 <section id="emu600">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/TRA-EMU606_in_Taichung_Station_2014-03-09.jpg/500px-TRA-EMU606_in_Taichung_Station_2014-03-09.jpg" alt="EMU600" class="train-img">
   <div class="specs">
     <div class="spec"><b>車種</b> 區間車 / 通勤電聯車</div>
     <div class="spec"><b>最高速度</b> 110 km/h</div>
@@ -126,7 +121,6 @@ footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,25
 
 <!-- EMU700 -->
 <section id="emu700">
-  <img src="https://www.trsc.com.tw/upload/images/img-58c9ebce3c3a1.jpg" alt="EMU700" class="train-img">
   <div class="specs">
     <div class="spec"><b>車種</b> 區間車</div>
     <div class="spec"><b>最高速度</b> 110 km/h</div>
@@ -141,7 +135,6 @@ footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,25
 
 <!-- EMU800 -->
 <section id="emu800">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/TRA_EMU800_prototype_and_manufactured_in_2016_Zhubei_Sta_20160915.jpg" alt="EMU800" class="train-img">
   <div class="specs">
     <div class="spec"><b>車種</b> 區間車</div>
     <div class="spec"><b>最高速度</b> 110 km/h</div>
@@ -156,7 +149,6 @@ footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,25
 
 <!-- EMU900 -->
 <section id="emu900">
-  <img src="https://v3-statics.mirrormedia.mg/images/20220221145709-39a1b4c60e154cd516dec5a40686ab82.jpg" alt="EMU900" class="train-img">
   <div class="specs">
     <div class="spec"><b>車種</b> 區間車 / 通勤</div>
     <div class="spec"><b>最高速度</b> 110 km/h</div>
@@ -171,7 +163,6 @@ footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,25
 
 <!-- EMU1200 -->
 <section id="emu1200">
-  <img src="https://pic.pimg.tw/chenshilun/1196650419.jpg" alt="EMU1200" class="train-img">
   <div class="specs">
     <div class="spec"><b>車種</b> 自強號（紅斑馬）</div>
     <div class="spec"><b>最高速度</b> 120 km/h</div>
@@ -186,7 +177,6 @@ footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,25
 
 <!-- EMU3000 -->
 <section id="emu3000">
-  <img src="https://images.newtalk.tw/resize_action2/600/album/news/803/62fb5049b0924.jpg" alt="EMU3000" class="train-img">
   <div class="specs">
     <div class="spec"><b>車種</b> 城際電聯車</div>
     <div class="spec"><b>最高速度</b> 130 km/h</div>
@@ -201,7 +191,6 @@ footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,25
 
 <!-- E200–400 -->
 <section id="e200">
-  <img src="https://static.cts.com.tw/news/photo/cts/201503/201503311598962_l.jpg" alt="E200–400" class="train-img">
   <div class="specs">
     <div class="spec"><b>車種</b> 莒光、貨運、觀光</div>
     <div class="spec"><b>最高速度</b> 110 km/h</div>
@@ -215,7 +204,6 @@ footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,25
 
 <!-- E500 -->
 <section id="e500">
-  <img src="https://2nd-train.net/files/topics/2024/09/18/5e84b20dc6eaf746fa169cb2c2dcea538134fd8b_amp.jpg" alt="E500" class="train-img">
   <div class="specs">
     <div class="spec"><b>車種</b> 電力機車</div>
     <div class="spec"><b>最高速度</b> 120 km/h</div>
@@ -229,7 +217,6 @@ footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,25
 
 <!-- E1000 -->
 <section id="e1000">
-  <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2025/03/21/realtime/31696185.jpg&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600&w=930" alt="E1000" class="train-img">
   <div class="specs">
     <div class="spec"><b>車種</b> 電力機車（PP 雙機運行）</div>
     <div class="spec"><b>最高速度</b> 160 km/h（設計）</div>
@@ -244,7 +231,6 @@ footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,25
 
 <!-- DR1000 -->
 <section id="dr1000">
-  <img src="https://lh3.googleusercontent.com/proxy/j4EaAmUR85MgYpLOIDUOIIIOT7O5CZsnhGtbvFhGGKMe3djpPO3uczo0_gfZRpL_Pb1eLDS6zet-KSDsURAdjht3oaWCHIy61kHFS_QhCdiD1-hcwDpKAhX898aHILyfja1nEbe8" alt="DR1000" class="train-img">
   <div class="specs">
     <div class="spec"><b>車種</b> 柴聯車 / 支線客車</div>
     <div class="spec"><b>最高速度</b> 約 110 km/h</div>
@@ -258,7 +244,6 @@ footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,25
 
 <!-- DR3100 -->
 <section id="dr3100">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/TRA_DR3100_train_in_Taoyuan_2023-01-30.jpg" alt="DR3100" class="train-img">
   <div class="specs">
     <div class="spec"><b>車種</b> 柴聯車 / 自強號（柴油動力客車）</div>
     <div class="spec"><b>設計最高速度</b> 110 km/h</div>
@@ -344,4 +329,5 @@ footer { text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,25
 </html>
 
    
+
 
