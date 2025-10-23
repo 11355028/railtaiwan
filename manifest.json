@@ -1,7 +1,7 @@
 {
   "name": "台鐵列車介紹",
   "short_name": "台鐵列車",
-  "start_url": "https://11355028.github.io/railtaiwan/",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
